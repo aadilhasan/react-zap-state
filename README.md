@@ -1,6 +1,6 @@
 # react-zap-state
 
-Simple react utility to improve react's local-state experience
+Simple react utility to improve local-state experience
 
 ## Install
 
@@ -93,3 +93,7 @@ export default zap<AppProps>(App, appState);
         }
     }); 
 ```
+
+## License
+
+MIT © [aadilhasan](https://github.com/aadilhasan)

@@ -1,7 +1,9 @@
 {
   "name": "react-zap-state",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "author": "Aadil Hasan",
+  "license": "MIT",
+  "description": "Simple react utility to improve local state experience",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -42,5 +44,12 @@
       "import": "./dist/react-zap-state.es.js",
       "require": "./dist/react-zap-state.umd.js"
     }
-  }
+  },
+  "keywords": [
+    "react-zap-state",
+    "react-state",
+    "useState",
+    "React.memo",
+    "react-utility"
+  ]
 }
