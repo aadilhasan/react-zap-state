@@ -6,7 +6,7 @@ const state = {
 };
 type Props = ZPropsType<typeof state>;
 
-function App({ state }: Props) {
+function DemoAppp({ state }: Props) {
   return (
     <div className="App">
       {state.count}
@@ -32,4 +32,4 @@ function App({ state }: Props) {
   );
 }
 
-export default zzap(App, state);
+export default zzap(DemoAppp, state);
