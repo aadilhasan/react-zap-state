@@ -1,4 +1,4 @@
-import { ZPropsType } from "./zzap";
+import { ZapProps } from "./zap";
 
 export type CallbackType<S> = (state: S) => void;
 
@@ -9,8 +9,8 @@ export type SetStateType<S> = (
   callback?: CallbackType<S>
 ) => void;
 
-export type PropsType<P extends ZPropsType<any>> = Omit<P, "state">;
+export type PropsType<P extends ZapProps<any>> = Omit<P, "state">;
 
-export type InitialStateType<P extends ZPropsType<any>> =
+export type InitialStateType<P extends ZapProps<any>> =
   | Omit<P["state"], "set">
   | ((props: PropsType<P>) => Omit<P["state"], "set">);

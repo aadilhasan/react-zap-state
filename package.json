@@ -1,5 +1,5 @@
 {
-  "name": "react-zzap",
+  "name": "react-zap-state",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -34,13 +34,13 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/react-zzap.umd.js",
-  "module": "./dist/react-zzap.es.js",
+  "main": "./dist/react-zap-state.umd.js",
+  "module": "./dist/react-zap-state.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/react-zzap.es.js",
-      "require": "./dist/react-zzap.umd.js"
+      "import": "./dist/react-zap-state.es.js",
+      "require": "./dist/react-zap-state.umd.js"
     }
   }
 }

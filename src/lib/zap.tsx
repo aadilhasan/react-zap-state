@@ -7,16 +7,16 @@ import {
   PropsType,
 } from "./types";
 
-export type ZPropsType<State extends Record<string, any>> = {
+export type ZapProps<State extends Record<string, any>> = {
   state: State & { set: SetStateType<State> };
 };
 
-export function zzap<T extends ZPropsType<any>>(
+export function zap<T extends ZapProps<any>>(
   Component: React.FC<any>,
   initialState: InitialStateType<T>
 ): React.FC<Omit<T, "state">> {
   type State = typeof initialState;
-  const ZzapComponent = memo((props: PropsType<T>) => {
+  const zapComponent = memo((props: PropsType<T>) => {
     const callbackRefs = useRef<CallbackType<State>[]>([]);
     const [state, setState] = useState<any>(
       typeof initialState === "function"
@@ -51,5 +51,5 @@ export function zzap<T extends ZPropsType<any>>(
   });
 
   // @ts-ignore
-  return ZzapComponent as React.FC<Omit<T, "state">>;
+  return zapComponent as React.FC<Omit<T, "state">>;
 }

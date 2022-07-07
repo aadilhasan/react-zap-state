@@ -1,10 +1,10 @@
 import "./App.css";
-import { zzap, ZPropsType } from "./lib/zzap";
+import { zap, ZapProps } from "./lib/zap";
 
 const state = {
   count: 0,
 };
-type Props = ZPropsType<typeof state>;
+type Props = ZapProps<typeof state>;
 
 function DemoAppp({ state }: Props) {
   return (
@@ -32,4 +32,4 @@ function DemoAppp({ state }: Props) {
   );
 }
 
-export default zzap(DemoAppp, state);
+export default zap(DemoAppp, state);

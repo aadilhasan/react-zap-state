@@ -1,1 +1,1 @@
-export * from "./zzap";
+export * from "./zap";

@@ -16,9 +16,9 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/lib/index.ts"),
-      name: "react-zzap",
+      name: "react-zap-state",
       formats: ["es", "umd"],
-      fileName: (format) => `react-zzap.${format}.js`,
+      fileName: (format) => `react-zap-state.${format}.js`,
     },
     minify: "esbuild",
     rollupOptions: {

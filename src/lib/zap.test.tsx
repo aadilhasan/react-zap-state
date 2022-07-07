@@ -1,14 +1,14 @@
 import { describe, expect, it, vi, beforeEach } from "vitest";
 import userEvent from "@testing-library/user-event";
 import { render, screen, waitFor } from "@testing-library/react";
-import { ZPropsType, zzap } from "./zzap";
+import { ZapProps, zap } from "./zap";
 
 const componentState = {
   count: 0,
   name: "test",
 };
 const mockCallback = vi.fn();
-type ComponentProps = ZPropsType<typeof componentState> & {
+type ComponentProps = ZapProps<typeof componentState> & {
   initialCount?: number;
 };
 const Component = ({ state, initialCount = 0 }: ComponentProps) => {
@@ -25,11 +25,11 @@ const Component = ({ state, initialCount = 0 }: ComponentProps) => {
 };
 
 const renderApp = (state: typeof componentState = componentState) => {
-  const App = zzap<ComponentProps>(Component, state);
+  const App = zap<ComponentProps>(Component, state);
   render(<App />);
 };
 
-describe("Zzap State", () => {
+describe("Zap State", () => {
   beforeEach(() => {
     mockCallback.mockClear();
   });
@@ -58,7 +58,7 @@ describe("Zzap State", () => {
 
   it("can derive initial state from props", async () => {
     const initialCount = 7;
-    const App = zzap<ComponentProps>(Component, ({ initialCount }) => ({
+    const App = zap<ComponentProps>(Component, ({ initialCount }) => ({
       ...componentState,
       count: (initialCount || 0) + 10,
     }));
